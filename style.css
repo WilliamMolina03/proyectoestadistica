@@ -1,0 +1,67 @@
+body {
+    margin: 100px;
+    padding: 0;
+    line-height: 1.6;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-image: url(estadistica.avif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 1800px;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #eee1e1;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(254, 252, 252, 0.1);
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #007bff;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #f7f2f2;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.2em;
+}

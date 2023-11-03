@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Estadística</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center;">Calculadora Estadística</h1>
+
+    <h2>Teorema de Bayes</h2>
+
+    <h2>ejemplo</h2>
+    <p>
+      Para comprender mejor en que situaciones o en que tipo de problemas se
+      hace uso del teorema de Bayes se pondrá el siguiente ejemplo: Se hizo una
+      encuesta a un grupo grande de personas donde se les preguntaba el genero y
+      si ellos practicaban algún deporte o hacían ejercicio en general, los
+      resultados de la encuesta fueron los siguientes: el 40% por ciento de los
+      encuestados eran hombres y el 60% eran mujeres, de los cuales el 80% de
+      los hombres y el 50% de las mujeres hacían ejercicios. Tomando como
+      referencia el supuesto anterior, las preguntas que se hacen normalmente en
+      problemas son del tipo: ¿Cuál es la probabilidad de que al seleccionar a
+      una persona al azar esta sea hombre y a la vez haga ejercicio?, que en
+      este caso se buscaría p(HnE) siendo H la probabilidad que sea un hombre y
+      E la probabilidad que haga ejercicio, esto se hace simplemente
+      multiplicando las probabilidades y se obtiene el resultado:
+      p(HnE)0.4*0.8=0.32. Pero el teorema de Bayes se usaría si la pregunta se
+      hace al revés, es decir:¿Cuál es la probabilidad que si se selecciona a
+      alguien que haga ejercicios, esta sea hombre?, en este planteamiento lo
+      que se busca es lo contrario a lo que se tiene, por que lo que se da en el
+      enunciado es el porcentaje de los géneros y que porcentaje de cada genero
+      hace ejercicio, pero no se tienen los porcentajes generales de las
+      personas que hacen ejercicio o no, sino que las probabilidades están
+      repartidas entre cada genero, y es en estos casos que se usa el teorema de
+      Bayes.
+    </p>
+
+    <label for="probA">P(A):</label>
+    <input type="number" id="probA" /><br />
+    <label for="probBA">P(B|A):</label>
+    <input type="number" id="probBA" /><br />
+    <label for="probB">P(B):</label>
+    <input type="number" id="probB" /><br />
+    <button onclick="calcularBayes()">Calcular</button>
+    <p>Resultado: <span id="resultadoBayes"></span></p>
+
+    <h2>Distribución de Bernoulli</h2>
+
+    <h2>ejemplo</h2>
+
+    <p>
+      distribución Bernoulli es una distribución de probabilidad discreta que
+      modela un experimento aleatorio con dos posibles resultados: éxito
+      (generalmente representado como 1) y fracaso (generalmente representado
+      como 0). La distribución está caracterizada por un único parámetro, p, que
+      representa la probabilidad de éxito en un solo ensayo. Un ejemplo típico
+      de una distribución Bernoulli sería el lanzamiento de una moneda justa. Si
+      definimos "cara" como éxito (1) y "sello" como fracaso (0), la
+      probabilidad de obtener una cara en un solo lanzamiento sería p = 0.5. Por
+      lo tanto, la distribución Bernoulli modelaría la probabilidad de obtener
+      una cara o un sello en un lanzamiento de moneda. P(x) = p^x * (1-p)^(1-x)
+      Donde: P(x) es la probabilidad de obtener el resultado x (0 o 1). p es la
+      probabilidad de éxito en un solo ensayo (en el caso de la moneda, 0.5). x
+      es el resultado (0 para sello, 1 para cara). Entonces, P(0) sería la
+      probabilidad de obtener sello (fracaso) en un solo lanzamiento, y P(1)
+      sería la probabilidad de obtener cara (éxito) en un solo lanzamiento.
+    </p>
+    <label for="probExito">Probabilidad de éxito (p):</label>
+    <input type="number" id="probExito" /><br />
+    <label for="numIntentos">Número de intentos (n):</label>
+    <input type="number" id="numIntentos" /><br />
+    <button onclick="calcularBernoulli()">Calcular</button>
+    <p>Resultado: <span id="resultadoBernoulli"></span></p>
+
+    <h2>Distribución Binomial</h2>
+
+    <h2>ejemplo</h2>
+
+    <p>
+      La Distribución Binomial es una distribución de probabilidad discreta que
+      se utiliza para modelar el número de éxitos en una serie de ensayos
+      independientes de Bernoulli, donde cada ensayo tiene dos resultados
+      posibles: éxito (generalmente representado como 1) o fracaso (generalmente
+      representado como 0). Esta distribución es útil cuando estás interesado en
+      contar el número de veces que un evento ocurre en un número fijo de
+      ensayos independientes. Supongamos que estás lanzando una moneda justa
+      (probabilidad de cara, p = 0.5) 5 veces (n = 5) y deseas calcular la
+      probabilidad de obtener exactamente 3 caras (x = 3). En este caso, puedes
+      usar la Distribución Binomial para calcular P(X = 3). La fórmula se
+      aplicaría de la siguiente manera: P(X = 3) = (5 choose 3) * (0.5)^3 *
+      (0.5)^(5-3) Donde (5 choose 3) es igual a 10. Entonces, P(X = 3) = 10 *
+      (0.5)^3 * (0.5)^2 = 0.3125, lo que significa que la probabilidad de
+      obtener exactamente 3 caras en 5 lanzamientos de una moneda justa es del
+      31.25%.
+    </p>
+    <label for="probExitoBinomial">Probabilidad de éxito (p):</label>
+    <input type="number" id="probExitoBinomial" /><br />
+    <label for="numIntentosBinomial">Número de intentos (n):</label>
+    <input type="number" id="numIntentosBinomial" /><br />
+    <label for="numExitosBinomial">Número de éxitos (k):</label>
+    <input type="number" id="numExitosBinomial" /><br />
+    <button onclick="calcularBinomial()">Calcular</button>
+    <p>Resultado: <span id="resultadoBinomial"></span></p>
+
+    <h2>Distribución de Poisson</h2>
+
+    <h2>ejemplo</h2>
+
+    <p>
+      La distribución de Poisson es una distribución de probabilidad discreta
+      que modela el número de eventos que ocurren en un intervalo de tiempo o
+      espacio fijo, bajo la suposición de que estos eventos son raros y
+      aleatorios. Esta distribución se caracteriza por un único parámetro, λ
+      (lambda), que representa la tasa promedio de ocurrencia de eventos en el
+      intervalo dado. Un ejemplo de distribución de Poisson sería el número de
+      llamadas telefónicas que recibe un centro de atención al cliente en una
+      hora. Si en promedio reciben 5 llamadas por hora (λ = 5), la distribución
+      de Poisson se usaría para calcular la probabilidad de recibir un número
+      específico de llamadas en una hora determinada. Por ejemplo, ¿cuál es la
+      probabilidad de recibir exactamente 3 llamadas en una hora? Usando la
+      fórmula de la distribución de Poisson, se calcularía P(3; 5) para obtener
+      la respuesta.
+    </p>
+    <label for="lambda">Tasa (λ):</label>
+    <input type="number" id="lambda" /><br />
+    <label for="k">Número de ocurrencias (k):</label>
+    <input type="number" id="k" /><br />
+    <button onclick="calcularPoisson()">Calcular</button>
+    <p>Resultado: <span id="resultadoPoisson"></span></p>
+
+    <script src="script"></script>
+  </body>
+</html>
